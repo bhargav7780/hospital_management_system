@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="form-card">
+  <h2>Add Doctor</h2>
+  <form method="post" action="{{ url_for('doctor.add_doctor_route') }}">
+    <label>Name</label><input name="name" required>
+    <label>Specialty</label><input name="specialty">
+    <label>Phone</label><input name="phone">
+    <button type="submit">Add Doctor</button>
+  </form>
+</div>
+{% endblock %}

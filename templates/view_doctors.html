@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Doctors</h2>
+<ul class="list">
+  {% for d in doctors %}
+    <li><strong>{{ d.name }}</strong> — {{ d.specialty }}</li>
+  {% else %}
+    <li>No doctors yet</li>
+  {% endfor %}
+</ul>
+{% endblock %}

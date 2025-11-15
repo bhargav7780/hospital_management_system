@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% block content %}
+
+<section class="dashboard-header">
+  <h2>Dashboard</h2>
+  <p class="subtitle">Welcome, {{ user }} — Role: {{ role }}</p>
+</section>
+
+<section class="dashboard-grid">
+  <a href="{{ url_for('patient.add_patient_route') }}" class="dashboard-card" data-anim>
+    <img src="{{ url_for('static', filename='images/add.svg') }}" class="card-icon" alt="">
+    <h3>Add Patient</h3><p>Quick add new patient</p>
+  </a>
+
+  <a href="{{ url_for('patient.view_patients') }}" class="dashboard-card" data-anim>
+    <img src="{{ url_for('static', filename='images/list.svg') }}" class="card-icon" alt="">
+    <h3>View Patients</h3><p>All patient records</p>
+  </a>
+
+  <a href="{{ url_for('doctor.add_doctor_route') }}" class="dashboard-card" data-anim>
+    <img src="{{ url_for('static', filename='images/doctor.svg') }}" class="card-icon" alt="">
+    <h3>Add Doctor</h3><p>Register new doctor</p>
+  </a>
+
+  <a href="{{ url_for('doctor.view_doctors') }}" class="dashboard-card" data-anim>
+    <img src="{{ url_for('static', filename='images/list.svg') }}" class="card-icon" alt="">
+    <h3>View Doctors</h3><p>Doctor list</p>
+  </a>
+
+  <a href="{{ url_for('appointment.appointment_page') }}" class="dashboard-card" data-anim>
+    <img src="{{ url_for('static', filename='images/appointment.svg') }}" class="card-icon" alt="">
+    <h3>Appointments</h3><p>Book or view appointments</p>
+  </a>
+</section>
+
+{% endblock %}
